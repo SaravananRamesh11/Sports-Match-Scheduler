@@ -162,8 +162,7 @@ public class LoginController {
     @PostMapping("/register")
     public String registerUser(@RequestParam("name") String name,
                                @RequestParam("password") String password,
-                               @RequestParam("email") String email,
-                               @RequestParam(value = "sportsPreferences", required = false) String[] sportsPreferences,
+                               @RequestParam("email") String email,                           
                                Model model) {
 
         if (userRepository.findByName(name).isPresent()) {
@@ -171,11 +170,10 @@ public class LoginController {
             return "registration"; // Stay on registration page if username exists
         }
 
-        // Convert sports array to a comma-separated string (e.g., "Football,Basketball")
-        String sports = (sportsPreferences != null) ? String.join(",", sportsPreferences) : "";
+       
 
         // Create and save user
-        User newUser = new User(name, password, email, sports);
+        User newUser = new User(name, password, email);
         userRepository.save(newUser);
 
         return "redirect:/"; // Redirect to login page after successful registration

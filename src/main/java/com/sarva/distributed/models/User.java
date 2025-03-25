@@ -13,13 +13,13 @@ public class User {
     private String name; 
     private String password;
     private String email;
-    private String sportsPreferences; // Stores multiple sports as "Football,Basketball"
+   
     public User() {}
-    public User(String name, String password, String email, String sportsPreferences) {
+    public User(String name, String password, String email) {
         this.name = name;
         this.password = password;
         this.email = email;
-        this.sportsPreferences = sportsPreferences;
+        
     }
     public Integer getUserId() {
         return userId;
@@ -53,11 +53,5 @@ public class User {
         this.password = password;
     }
 
-    public String getSportsPreferences() {
-        return sportsPreferences;
-    }
-
-    public void setSportsPreferences(String sportsPreferences) {
-        this.sportsPreferences = sportsPreferences;
-    }
+   
 }

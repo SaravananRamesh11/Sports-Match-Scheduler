@@ -54,8 +54,6 @@
             <input type="text" th:field="*{name}" placeholder="Username" required>
             <input type="password" th:field="*{password}" placeholder="Password" required>
             <input type="email" th:field="*{email}" placeholder="Email" required>
-            <label><input type="checkbox" name="sportsPreferences" value="Football"> Football</label>
-            <label><input type="checkbox" name="sportsPreferences" value="Basketball"> Basketball</label>
             <button type="submit">Register</button>
         </form>
         <p th:if="${error}" class="error-message" th:text="${error}" style="color: red;"></p>

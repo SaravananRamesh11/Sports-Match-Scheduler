@@ -20,10 +20,10 @@ public class UserSeeder implements CommandLineRunner {
 public void run(String... args) throws Exception {
     if (userRepository.count() == 0) {
         List<User> users = Arrays.asList(
-            new User("Alice", "ali123", "sara@gmail.com", "Football"),
-            new User("Sarva", "ney", "vanan@gmail.com", "Basketball"),
-            new User("John", "john456", "john@gmail.com", "Football,Basketball"),
-            new User("sjr", "ney", "22pc32@psgtech.ac.in", "Football")
+            new User("Alice", "ali123", "sara@gmail.com"),
+            new User("Sarva", "ney", "vanan@gmail.com"),
+            new User("John", "john456", "john@gmail.com"),
+            new User("sjr", "ney", "22pc32@psgtech.ac.in")
              // Both sports
         );
 
